@@ -8,18 +8,18 @@ const connectDB = require('./config/db')
 const authRoutes = require('./routes/auth');
 const testRoutes = require('./routes/tests');
 const resultRoutes = require('./routes/results');
-// const paymentRoutes = require('./routes/payments');
+const adminRoutes = require('./routes/admin')
+
 
 const app = express();
-app.use(cors({ origin: config.clientUrl, credentials: true}));
+app.use(cors({ origin: config.clientUrl || "https://ecotesthub-vken.onrender.com", credentials: true}));
 app.use(express.json());
 
 // API routes
 app.use('/api/auth', authRoutes);
 app.use('/api/tests', testRoutes);
 app.use('/api/results', resultRoutes);
-// app.use('/api/payments', paymentRoutes);
-
+app.use('/api/admin', adminRoutes);
 
 
 // Connect DB & start server
@@ -30,4 +30,3 @@ mongoose.connect(config.mongoUri, { useNewUrlParser: true, useUnifiedTopology: t
 
 const PORT = config.port;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`))
-

@@ -10,7 +10,6 @@ export default function TestPage({ activeMenu }) {
   const nav = useNavigate();
   const [test, setTest] = useState(null);
   const [answers, setAnswers] = useState({});
-  // useEffect(()=>{ API.get(`/tests/${id}`).then(r=>setTest(r.data)); }, [id]);
   useEffect(() => {
     const fetchTest = async () => {
       try {
@@ -30,18 +29,7 @@ export default function TestPage({ activeMenu }) {
     updated[questionIndex] = answerIndex;
     setAnswers(updated);
   };
-
-  //   useEffect(() => {
-  //   API.get(`/tests/${id}`)
-  //     .then(r => setTest(r.data))
-  //     .catch(err => {
-  //       if (err.response?.status === 403) {
-  //         alert('Trial limit reached. Please subscribe to continue.');
-  //         nav('/subscription');
-  //       }
-  //     });
-  // }, [id]);
-  const onTimeUp = () => submit();
+  const onTimeUp = () => {submit()};
   const submit = async (e) => {
     try {
       e.preventDefault();

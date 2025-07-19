@@ -1,26 +1,18 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
-import API from '../services/api';
 import Navbar from '../components/layouts/Navbar';
 import SideMenu from '../components/layouts/SideMenu';
-// import FAQsAndTips from './FAQsAndTips';
 import AvailableTests from './AvailableTests';
 import FAQsAccordion from './FAQAccordion';
 export default function Dashboard({ activeMenu }) {
-  // const [tests, setTests] = useState([]);
-  // useEffect(() => { API.get('/tests').then(res => setTests(res.data)); }, []);
+
   return (
     <div className="p-4">
       <Navbar activeMenu={activeMenu} />
 
       <div className='flex'>
-        
-
-          <div className="max-[1080px]:hidden">
-            <SideMenu activeMenu={activeMenu} />
-          </div>
-        
-
+        <div className="max-[1080px]:hidden">
+          <SideMenu activeMenu={activeMenu} />
+        </div>
         <div className="grow m-5">
           <div className="bg-blue-50 p-6 rounded-md">
             <h1 className="text-3xl font-bold mb-2">👋 Welcome, User!</h1>
@@ -29,15 +21,10 @@ export default function Dashboard({ activeMenu }) {
               Explore available tests, track your progress, and improve your skills. Your result will be saved automatically.
             </p>
           </div>
-          {/* <h2 className="text-2xl font-bold mb-4 text-center">📚 Available Tests</h2>
-          <ul className="text-sm  text-green-700 dark:text-green-300 w-full">
-            {tests.map(t => <li key={t._id}><Link className='bg-blue-50' to={`/test/${t._id}`}>{t.title}</Link></li>)}
-          </ul>
-          <Link to="/history">History</Link> */}
 
-          <AvailableTests/>
+          <AvailableTests />
 
-          <FAQsAccordion/>
+          <FAQsAccordion />
         </div>
       </div>
     </div>

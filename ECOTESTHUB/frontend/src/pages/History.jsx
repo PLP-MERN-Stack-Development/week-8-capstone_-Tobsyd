@@ -5,7 +5,6 @@ import SideMenu from '../components/layouts/SideMenu';
 export default function History({ activeMenu }) {
   const [hist, setHist] = useState([]);
   const [error, setError] = useState('');
-  // useEffect(()=>{ API.get('/results').then(r=>setHist(r.data)); }, []);
   useEffect(() => {
     const fetchResults = async () => {
       try {
@@ -32,8 +31,6 @@ export default function History({ activeMenu }) {
             <p>No test results found.</p>
           ) : (
             <ul className="space-y-4">
-              {/* {hist.map(h=><li key={h._id}>{h.test.title}: {h.score}/{h.total} 
-          on {new Date(h.takenAt).toLocaleDateString()}</li>)} */}
               {hist.map((r, i) => (
                 <li key={i} className="p-4 border rounded">
                   <p><strong> Test:</strong>{r.test?.title || 'Untitled'}</p>
@@ -59,13 +56,3 @@ export default function History({ activeMenu }) {
     </div>
   );
 }
-
-{/* <button onClick={() => API.get(`/results/${r._id}/pdf`, { responseType: 'blob' })
-  .then(res => {
-    const url = window.URL.createObjectURL(new Blob([res.data]));
-    const link = document.createElement('a');
-    link.href = url;
-    link.setAttribute('download', `result_${r._id}.pdf`);
-    document.body.appendChild(link);
-    link.click();
-  })}>Download PDF</button> */}
