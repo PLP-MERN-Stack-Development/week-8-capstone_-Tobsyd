@@ -3,23 +3,23 @@ import { Link, useNavigate } from 'react-router-dom';
 import API from '../services/api';
 
 export default function Login() {
-  const [form, setForm] = useState({ email:'',password:'' });
+  const [form, setForm] = useState({ email: '', password: '' });
   const [error, setError] = useState('');
   const nav = useNavigate();
-  const handleChange =(e) => setForm({ ...form, [e.target.name]: e.target.value })
+  const handleChange = (e) => setForm({ ...form, [e.target.name]: e.target.value })
   const submit = async (e) => {
     try {
       e.preventDefault();
       const { data } = await API.post('/auth/login', form);
       //Save token
       localStorage.setItem('token', data.token);
-        // Optionally save user info(including role)
+      // Optionally save user info(including role)
       localStorage.setItem('role', data.user.role);
-      if(data.user.role === 'admin'){
+      if (data.user.role === 'admin') {
         nav('/admin')
-      } else{
+      } else {
 
-      nav('/dashboard');
+        nav('/dashboard');
       }
     } catch (err) {
       setError(
@@ -27,8 +27,9 @@ export default function Login() {
     }
   };
   return (
-       <div className="max-w-md mx-auto mt-10 p-6 bg-white rounded-xl shadow-md">
-      <h2 className="text-2xl font-bold mb-4 text-center">Login</h2>
+    <div className="max-w-md mx-auto mt-10 p-6 bg-white rounded-xl shadow-md">
+      <h2 className="text-2xl font-bold mb-4 text-center">Welcome back to ECOTESTHUB!</h2>
+      <p className="text-gray-500 text-center mb-6">Your journey to exam success continues here.</p>
 
       {error && <div className="text-red-500 mb-3">{error}</div>}
 
@@ -66,7 +67,7 @@ export default function Login() {
       <p>
         Don't have an account? {""}
         <Link className="" to="/register">
-            Register
+          Register
         </Link>
       </p>
     </div>

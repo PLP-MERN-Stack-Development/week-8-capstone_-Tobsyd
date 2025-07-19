@@ -286,7 +286,7 @@ Authorization: Bearer <JWT_TOKEN>
 **Request Body:**
 
 ```json
-{
+{ 
   "answers": [
     {
       "questionId": "abc123",

@@ -11,27 +11,16 @@ api.interceptors.request.use((config) => {
   return config;
 });
 
-api.interceptors.response.use(
-  (response) => response,
-  (error) => {
-    if (error.response?.status === 401) {
-      localStorage.removeItem('token');
-      localStorage.removeItem('user');
-      window.location.href = '/login';
-    }
-    return Promise.reject(error);
-  }
-);
-
-export const usersAPI = {
-  getProfile: () => api.get('/users/profile'),
-  updateProfile: (userData) => api.put('/users/profile', userData),
-  getMyTransactions: () => api.get('/users/transactions'),
-  getUsers: (params) => api.get('/users', { params }),
-  getUser: (id) => api.get(`/users/${id}`),
-  updateUser: (id, userData) => api.put(`/users/${id}`, userData),
-  deleteUser: (id) => api.delete(`/users/${id}`),
-  getDashboardStats: () => api.get('/users/dashboard/stats'),
-};
+// api.interceptors.response.use(
+//   (response) => response,
+//   (error) => {
+//     if (error.response?.status === 401) {
+//       localStorage.removeItem('token');
+//       localStorage.removeItem('user');
+//       window.location.href = '/login';
+//     }
+//     return Promise.reject(error);
+//   }
+// );
  
 export default api;

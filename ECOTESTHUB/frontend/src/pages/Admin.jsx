@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import API from '../services/api';
 import Navbar from '../components/layouts/Navbar';
 import SideMenu from '../components/layouts/SideMenu';
+import Footer from '../components/layouts/Footer';
 
 export default function Admin({ activeMenu }) {
 
@@ -186,6 +187,7 @@ export default function Admin({ activeMenu }) {
           </div>
         </div>
       </div>
+      <Footer/>
     </div>
   );
 }

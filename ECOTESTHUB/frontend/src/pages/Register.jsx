@@ -20,7 +20,8 @@ export default function Register() {
   };
   return (
     <div className="max-w-md mx-auto mt-10 p-6 bg-white rounded-xl shadow-md">
-      <h2 className="text-2xl font-bold mb-4 text-center">Register</h2>
+      <h2 className="text-2xl font-bold mb-4 text-center">Create your ECOTESTHUB Account</h2>
+      <p className="text-gray-500 text-center mb-6">Start preparing smarter today</p>
 
       {error && <div className="text-red-500 mb-3">{error}</div>}
 
