@@ -368,13 +368,13 @@ Tokens are provided upon login or registration.
 
 ## 🌐 **Live Demo**
 
-[🔗 https://ecotesthub-vken.onrender.com](https://your-live-app-url.com)
+[🔗 https://ecotesthub-vken.onrender.com](https://ecotesthub-vken.onrender.com)
 
 ---
 
-## 🎥 **Video Demo**
+## 🎥 **Video Demo (5-10 minutes)**
 
-[📺 https://youtube.com/shorts/m7AohbeIlEE?si=fkuW4Dzl3NcMgWF-](https://your-demo-video-link.com)
+[📺 Watch Demo on YouTube](https://youtube.com/shorts/m7AohbeIlEE?si=fkuW4Dzl3NcMgWF-)
 
 ---
 
