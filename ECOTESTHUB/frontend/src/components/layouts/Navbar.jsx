@@ -1,5 +1,4 @@
 import React, {useState} from "react";
-// import {HiOutLineMenu, HiOutlineX} from "react-icons/hi"
 import SideMenu from "./SideMenu";
 
 function Navbar({activeMenu}) {
@@ -20,7 +19,7 @@ function Navbar({activeMenu}) {
                 )}
             </button>
 
-            <h2 className="text-2xl font-bold text-center">EDUTESTHUB</h2>
+            <h2 className="text-2xl font-bold text-center">ECOTESTHUB</h2>
 
             {openSideMenu && (
                 <div className="fixed top-[61px] -ml-4 bg-white">
