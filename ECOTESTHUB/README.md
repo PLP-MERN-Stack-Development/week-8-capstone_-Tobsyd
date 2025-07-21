@@ -372,9 +372,9 @@ Tokens are provided upon login or registration.
 
 ---
 
-## 🎥 **Video Demo (5-10 minutes)**
+## 🎥 **Video Demo**
 
-[📺 Watch Demo on YouTube](https://your-demo-video-link.com)
+[📺 https://youtube.com/shorts/m7AohbeIlEE?si=fkuW4Dzl3NcMgWF-](https://your-demo-video-link.com)
 
 ---
 
